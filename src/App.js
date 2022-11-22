@@ -1,9 +1,12 @@
 import logo from "./logo.svg";
 import "./App.css";
 import { Text } from "react-native";
-import { Button } from "morra_components";
+import { CustomButton } from "morra_components";
 
 function App() {
+  const log = () => {
+    console.log("fratm");
+  };
   return (
     <div className="App">
       <header className="App-header">
@@ -11,8 +14,8 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <Button />
-        <Text>funzionana testina we figa</Text>
+        <CustomButton onClickCallback={() => console.log("ciao")} />
+        <Text>funzionana</Text>
         <a
           className="App-link"
           href="https://reactjs.org"
