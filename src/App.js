@@ -1,30 +1,17 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { Text } from "react-native";
-import { CustomButton } from "morra_components";
-
+import { Route, Routes } from "react-router-dom";
+import PAGES from "./router/pages";
+import WebLogin from "./pages/WebLogin";
+import WebGame from "./pages/WebGame";
 function App() {
-  const log = () => {
-    console.log("fratm");
-  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <CustomButton onClickCallback={() => console.log("ciao")} />
-        <Text>funzionana</Text>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        <Route path={PAGES.login} element={<WebLogin />} />
+        <Route path={PAGES.game} element={<WebGame />} />
+      </Routes>
+      <Text>funzionana</Text>
     </div>
   );
 }
