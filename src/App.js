@@ -11,7 +11,6 @@ function App() {
         <Route path={PAGES.login} element={<WebLogin />} />
         <Route path={PAGES.game} element={<WebGame />} />
       </Routes>
-      <Text>funzionana</Text>
     </div>
   );
 }

@@ -2,6 +2,7 @@ import React from "react";
 import { Login } from "morra_components";
 import { useNavigate } from "react-router-dom";
 import PAGES from "../router/pages";
+import "../App.css";
 
 const WebLogin = () => {
   const navigate = useNavigate();
@@ -10,8 +11,10 @@ const WebLogin = () => {
     navigate(PAGES.game);
   };
   return (
-    <div>
-      <Login callback={goToGame} />
+    <div className="container">
+      <div className="">
+        <Login callback={goToGame} />
+      </div>
     </div>
   );
 };
