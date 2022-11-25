@@ -8,15 +8,15 @@ import Background from "../components/Background";
 const WebRanking = () => {
   const navigate = useNavigate();
 
-  const goToLogin = () => {
-    navigate(PAGES.login);
+  const goToGame = () => {
+    navigate(PAGES.game);
   };
   return (
     <div className="container">
       <Background />
       <div className="gameimg">
         <div className="game">
-          <Ranking callback={goToLogin} />
+          <Ranking callback={goToGame} />
         </div>
       </div>
     </div>
