@@ -3,18 +3,21 @@ import { Game } from "morra_components";
 import { useNavigate } from "react-router-dom";
 import PAGES from "../router/pages";
 import Background from "../components/Background";
+import SmallBg from "../components/SmallBg";
 
 const WebGame = () => {
   const navigate = useNavigate();
 
-  const goToLogin = () => {
-    navigate(PAGES.login);
+  const goToRanking = () => {
+    navigate(PAGES.ranking);
   };
   return (
-    <div>
+    <div className="container">
       <Background />
-      <div>
-        <Game callback={goToLogin} />
+      <div className="gameimg">
+        <div className="game">
+          <Game navigateToRankingCallback={goToRanking} />
+        </div>
       </div>
     </div>
   );

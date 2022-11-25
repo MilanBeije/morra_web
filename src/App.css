@@ -1,3 +1,8 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
 @keyframes moving-img {
   0% {
     left: 0;
@@ -11,7 +16,7 @@
 }
 
 .layer {
-  height: 100vh;
+  height: 100%;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -20,15 +25,44 @@
   background: url("./assets/paralax.png") repeat-x;
   animation: moving-img 20000s linear infinite;
   background-size: auto 100%;
-  filter: brightness(0.5);
+}
+
+.layer-mini {
+  height: 100%;
+  z-index: -10;
+  overflow: hidden;
+}
+
+.overlay {
+  filter: brightness(0.8);
 }
 
 .container {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100vh;
+  width: 100vw;
 }
 .login {
-  height: 60% !important;
-  width: 800px !important;
+  height: 75% !important;
+  width: 700px !important;
+}
+.game {
+  overflow: hidden;
+  height: 100% !important;
+  width: 100% !important;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  border: 5px solid violet;
+}
+.gameimg {
+  border-radius: 5px;
+  overflow: hidden;
+  background-image: url(./assets/bg.png);
+  background-size: contain;
+  height: 75% !important;
+  width: 700px !important;
+  z-index: 90;
 }
